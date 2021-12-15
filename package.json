@@ -1,0 +1,24 @@
+{
+  "name": "js-basics",
+  "version": "1.0.0",
+  "description": "Try basic operations in node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index --ignore ./db/contacts.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ponomaleks/node-js-basics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ponomaleks/node-js-basics/issues"
+  },
+  "homepage": "https://github.com/Ponomaleks/node-js-basics#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
