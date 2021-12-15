@@ -1,3 +1,14 @@
+// const yargs = require('yargs');
+// const { hideBin } = require('yargs/helpers');
+const { program } = require('commander');
+
+program
+  .option('-a, --action <type>', 'choose action')
+  .option('-i, --id <type>', 'user id')
+  .option('-n, --name <type>', 'user name')
+  .option('-e, --email <type>', 'user email')
+  .option('-p, --phone <type>', 'user phone');
+
 const contactsOperations = require('./contacts');
 
 async function invokeAction({ action, id, name, email, phone }) {
@@ -41,10 +52,15 @@ async function invokeAction({ action, id, name, email, phone }) {
       console.warn('\x1B[31m Unknown action type!');
   }
 }
-invokeAction({
-  action: 'remove',
-  id: '1',
-  //   name: 'Vasia POPOPO',
-  //   email: 'cvetochek@gmail.com',
-  //   phone: '0990111232',
-});
+
+// CLI с помощью пакета yargs
+// const arr = hideBin(process.argv);
+// const { argv } = yargs(arr);
+// console.log(argv);
+
+// CLI с помощью пакета commander
+program.parse(process.argv);
+const argv = program.opts();
+
+// Вызов функции с переданными опциями
+invokeAction(argv);

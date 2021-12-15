@@ -50,11 +50,13 @@ async function removeContact(contactId) {
     if (idx === -1) {
       return null;
     }
+
+    // const newList = list.filter(el => !(el.id === contactId));
+    // await fs.writeFile(contactsPath, JSON.stringify(newList, null, 2));
+    // return list[idx];
     const removedContact = list.splice(idx, 1);
-    if (!removedContact) {
-      return null;
-    }
     await fs.writeFile(contactsPath, JSON.stringify(list, null, 2));
+
     return removedContact;
   } catch (err) {
     console.error(err);
