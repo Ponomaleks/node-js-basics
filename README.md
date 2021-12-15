@@ -1,5 +1,7 @@
 # node-js-basics
 
+task https://github.com/goitacademy/nodejs-homework/tree/master/homework-01
+
 Try basic operations in node js
 
 <img src="https://i.ibb.co/C2jjD2V/list.jpg" alt="GEt all contacts">
